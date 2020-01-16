@@ -14,6 +14,8 @@ public enum ResultCode {
 	 */
 	SUCCESS(1, "成功"),
 
+	LOGIN_FAILED(401, "登录失败!"),
+
 	BAD_REQUEST(500, "服务器异常"),
 	;
 

@@ -1,5 +1,6 @@
 package com.dabanjia.vayne.core.exception;
 
+import com.dabanjia.vayne.core.constant.ResultCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -26,5 +27,10 @@ public class ResponseException extends RuntimeException {
 	public ResponseException(Integer code, String message) {
 		super(message);
 		this.code = code;
+	}
+
+	public ResponseException(ResultCode resultCode) {
+		this.code = resultCode.getCode();
+		this.message = resultCode.getMessage();
 	}
 }
